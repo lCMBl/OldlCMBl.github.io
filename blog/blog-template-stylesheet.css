@@ -1,0 +1,61 @@
+html {
+  background-color: #FFFFFF;
+}
+main {
+  text-align: center;
+
+}
+
+.blog {
+  border-left: solid;
+  border-top: solid;
+  border-width: 1px;
+  display: inline-block;
+  width: 45%;
+  padding: 20px;
+  color:#9E9E9E;
+}
+
+.text {
+  font-family:'Century Gothic',CenturyGothic,'Apple Gothic',AppleGothic,sans-serif;
+  color: #404040;
+}
+
+h1 , h2 , h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 30%
+}
+
+h4 {
+  padding-right: 20%;
+  font-size: .7em;
+  color: #969696;
+
+}
+.navigation {
+  position: relative;
+  border: solid;
+  border-width: 1px;
+  background: #FFFFFF;
+  width: auto;
+  right: -24.4%;
+  float: left;
+
+}
+
+
+.navigation td {
+  text-align: center;
+  cellspacing: auto;
+  border-bottom: solid;
+  border-width: 1px;
+
+}
+a {
+  color:#2B2B2B
+}
+
+a:hover {
+  color: #8F8F8F;
+}
