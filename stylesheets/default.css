@@ -1,0 +1,62 @@
+html {
+  font-family:'Century Gothic',CenturyGothic,'Apple Gothic',AppleGothic,sans-serif;
+  background: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:hover {
+  background: white;
+  color: gray;
+}
+
+a:active {
+  color: lightgoldenrodyellow;
+}
+
+a:visited {
+  color: black;
+}
+
+
+.top-nav-table {
+  text-align: center;
+  /*position: absolute;*/
+  width: 100%;
+  border-bottom: 1px solid black;
+  background: lightgray;
+}
+
+.top-nav-button {
+  /*for the div itself, not the text inside of it*/
+  height: 15%;
+  text-align: center;
+  /*positioning taken care of by a table*/
+  margin: 10px;
+  border: 1px solid black;
+  /* background: gray; */
+}
+
+.large-text {
+  font-size: 20px;
+}
+
+.top-nav-button .large-text:hover {
+  background: whitesmoke;
+}
+
+.main-text {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  width: 50%;
+  left: 25%;
+  position: relative;
+  margin-top: 2%;
+  padding-left: 10px;
+}
