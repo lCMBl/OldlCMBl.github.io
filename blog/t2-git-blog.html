@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog!</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+
+</head>
+
+<main class="text everything">
+
+  <!-- following section is the header bar, and includes title, and links to cultural blog / technical blog -->
+    <!-- just uncomment the preset that is needed.
+    technical blogpost: -->
+    <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">< Christian's Portfolio</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Technical Blog</h1>
+            </td>
+            <td>
+              <a href="c1-chefs-kitchen.html"><div class="top-nav-button large-text">DBC Cultural Blog ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- cultural blog post -->
+    <!-- <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="t1-git-blog.html"><div class="top-nav-button large-text">< DBC Technical Blog</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Cultural Blog</h1>
+            </td>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">Christian's Portfolio ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section> -->
+
+
+
+  <h1>CSS positioning</h1>
+  <h2>or, "I'm still having problems with my nav bar"</h2>
+  <h4>Feb 15th, 2015</h4>
+
+  <section class="blog">
+    <p>
+      So, If you're like me, (unlikely, but possible) then CSS positioning has been a huge headache for you. Specifically, getting elements to stay at their respectve spots on the page while the page is resized or zoomed has proven difficult for me. Fear not though! Despite my work in progress implementation of css positioning, I have picked up enough to be useful. Specifically, I am now capable of explaining the differences between absolute, relative, static, and fixed positions to all of you lucky people.
+    </p>
+    <p>
+        First things first, Static positioning is about as basic as you can get. Pretty much every element defaults to static positioning, and all it means is that elements will be rendered in their normal spot. Easy, right?
+    </p>
+    <p>
+        The next type of positioning is much more powerful, but can also be tricky to use. This is of course, the relative position scheme. Basically, setting an element to relative positioning means that an element will be positioned relative to where that element <i>would have been</i> if it was positioned statically. So, an element with a relative position and a left value of 10 px will be offset 10 px to the right of where it would normally be.
+    </p>
+    <p>
+        One of the more powerful types of positioning is the absolute position, which positions an element relative to the next parent element that is either relatively or absolutely positioned. If no such element exists, the element is positioned relative to the html document itself. Basically, the absolute positioning lets you place the element precisely where you want it.
+        (elements positioned with absolute positioning)<img src="../../phase-0-unit-1/week-2/imgs/Screen Shot 9.png" height="400" width="640">
+    </p>
+    <p>
+        Fixed position is useful for things like header or nav bars that need to be accessible at all times. Rather than positioning relative to anything in the html document itself, fixed position elements position themselves relative to the view port. This means that they will always occupy the same space on the screen, regardless of the elements on the page or scrolling.
+    </p>
+    <p>
+        That's all for now! - Christian
+    </p>
+
+  </section>
+  <table class="navigation">
+    <tr>
+      <td><a href="t1-git-blog.html">Post 1: Version Control</a></td>
+    </tr>
+    <tr>
+      <td><a href="t2-git-blog.html">Post 2: CSS Positioning</a></td>
+    </tr>
+
+    <!-- <tr>
+      <td><a href="#">Post 3</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="#">Post 4</a></td>
+    </tr> -->
+    </td>
+  </table>
+</main>
