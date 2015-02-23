@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+
+</head>
+
+<main class="text everything">
+
+  <!-- following section is the header bar, and includes title, and links to cultural blog / technical blog -->
+    <!-- just uncomment the preset that is needed.
+    technical blogpost: -->
+    <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">< Christian's Portfolio</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Technical Blog</h1>
+            </td>
+            <td>
+              <a href="c1-chefs-kitchen.html"><div class="top-nav-button large-text">DBC Cultural Blog ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- cultural blog post -->
+    <!-- <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="t1-git-blog.html"><div class="top-nav-button large-text">< DBC Technical Blog</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Cultural Blog</h1>
+            </td>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">Christian's Portfolio ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section> -->
+
+
+
+  <h1>Of array's and hashes</h1>
+  <h2>I.e. Handy ways to store your data</h2>
+  <h4>Feb 22, 2015</h4>
+
+  <section class="blog">
+    <p>
+      So, let's start out with a fairly common problem when making a program. I want to record some information, say, a license plate number. However, I want to store a lot of license plate numbers, say, one for every employee who wants to park in the company lot and not get towed. With basic programming knowledge we covered before this week, that might look something like this:
+      <p>
+        johns_plate = 454-hhh
+        cathys_plate = 555-hhh
+        frank_plate = 555-fff
+        ...
+      </p>
+
+      As you can see, this would get out of hand pretty quickly. Not to mention that DRY programmers weep when they think of making an variable for each individual employee. Fortunately, there are two objects that ruby (and pretty much every other programming language) includes to deal with the problem of storing data. These are 'Arrays' and 'Hashes.'
+    </p>
+    <p>
+        First, arrays might provide a solution to the above problem. Arrays are an ordered list that enable the storage of an unknown number of objects. These objects are ordered by index, (think an ordered list) starting at zero, with negative numbers referring to steps from the end of the array. With an array, the above problem  is easily resolved with the code: license_plates = ["454-hhh", "555-hhh", "555-fff", ...]. It's even possible to add new plates later with license_plates.push("555-555"). The plates can then be checked easily later, by using license_plates[num of index]. Overall this is a very efficient way to store information. However, arrays have a couple of shortcomings which I will explain by comparing them to hashes.
+    </p>
+    <p>
+        The solution with arrays works fine, as long as you don't care which employee has which license plate. Notice, that no names were stored, only a list of approved plates. This means that not only will you have to loop through each item in the array and check them against a potential illegal parker, but if one of the cars has it's lights on, you won't be able to notify the owner directly. Because an array is an ordered list, it is best suited to containing properties of a single object (like all of the books on my shelf) or a 1 dimensional data set (people in a class).
+    </p>
+    <p>
+        Hashes on the other hand, are matched key - data pairs. You can think of them almost like a dictionary, where a word is the key, and the definition is the data. The way hashes work is you input the key, like so: dictionary["Rat"] and it returns the value for that key: dictionary["Rat"] = "a small rodent." Returning to the question of license plates, If I use a hash instead of an array, I can store each license plate as a name - plate pair. In fact, if I take the plate numbers as the key, and the name as the data, then I am quickly and easily able to search the hash by plate number. Defining a hash is as simple as saying license_plates = {454-hhh=>"John", 555-hhh=>"Fathy", 555-fff=>"Frank", ...} and once defined, searching through the hash is much faster than searching through an array. While an array requires you to check each individual element until you've found a match or you reach the end, the has will return the value for the passed key if the key already exists, or nil if the key does not. This feature would make it immediately obvious if the plate we are looking for should be towed or not! Thus, the problem is solved.
+    </p>
+
+  </section>
+  <table class="navigation">
+    <tr>
+      <td><a href="t1-git-blog.html">Post 1: Version Control</a></td>
+    </tr>
+    <tr>
+      <td><a href="t2-css-design.html">Post 2: CSS Positioning</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="t3-arrays-hashes.html">Post 3: Arrays and Hashes</a></td>
+    </tr>
+
+    <!-- <tr>
+      <td><a href="#">Post 4</a></td>
+    </tr> -->
+    </td>
+  </table>
+</main>
