@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog!</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+
+</head>
+
+<main class="text everything">
+
+  <!-- following section is the header bar, and includes title, and links to cultural blog / technical blog -->
+    <!-- just uncomment the preset that is needed.
+    technical blogpost: -->
+    <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">< Christian's Portfolio</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Technical Blog</h1>
+            </td>
+            <td>
+              <a href="c1-chefs-kitchen.html"><div class="top-nav-button large-text">DBC Cultural Blog ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- cultural blog post -->
+    <!-- <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="t1-git-blog.html"><div class="top-nav-button large-text">< DBC Technical Blog</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Cultural Blog</h1>
+            </td>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">Christian's Portfolio ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section> -->
+
+
+
+  <h1>Hashes and Grouping</h1>
+  <h2>How to use the group_by method to make your life easier</h2>
+  <h4>March 1st, 2015</h4>
+
+  <section class="blog">
+    <p>
+      So one of the most common tasks of a programmer is to group things together and pass them back out. Whether it's a category of products, or a section of customer information, grouping things is vital to programming.
+    </p>
+    <p>
+        Now that the above boring sentences are out of the way, lets get to the good stuff, aka how to use the group_by method on your arrays to make grouping simple. The group_by command can be used on any array or hash to group the contents into different categories based on a block that follows the command. The code looks like this:
+    </p>
+    <p class="code-block">
+      array.group_by {|element| element % 2 == 0} # sorts the elements into a group that is divisible by two and a group that is not.
+      <br>
+      hash.group_by {|key, value| value} # sorts the pairs into groups containing the same value.
+    </p>
+    <p>
+        group_by returns a hash with each key being a category, and each value an array of all of the elements that fall into that category. This flexibility is afforded by both arrays and hashes being enumerable objects. group_by is not itself a method for either the array or the hash class, it is instead a method of the enumerable class. I hope this has provided a little trick that will help you in the future! Till next time!
+    </p>
+
+  </section>
+  <table class="navigation">
+    <tr>
+      <td><a href="t1-git-blog.html">Post 1: Version Control</a></td>
+    </tr>
+    <tr>
+      <td><a href="t2-css-design.html">Post 2: CSS Positioning</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="t3-arrays-hashes.html">Post 3: Arrays and Hashes</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="t4-enumerable-methods.html">Post 4: Grouping and Enumerables</a></td>
+    </tr>
+  </table>
+</main>

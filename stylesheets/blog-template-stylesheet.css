@@ -16,6 +16,11 @@ main {
   color:#9E9E9E;
 }
 
+.code-block {
+  border: 1px solid black;
+  background: #CBDEDE;
+}
+
 .text {
   font-family:'Century Gothic',CenturyGothic,'Apple Gothic',AppleGothic,sans-serif;
   color: #404040;
