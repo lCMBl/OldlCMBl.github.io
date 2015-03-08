@@ -70,19 +70,19 @@ end
 # returns a hash with the utility preference names as keys, and settings as values.
 def parse_util_pref(array)
   temp_array = []
-  util_hash = {}
+  utilHash = {}
   array.each {|line|
     if (line.chr != "#")
       # a '#' marks a comment line, so these lines should be ignored
       temp_array.push(line.split(";"))
     end
   }
-  util_hash = Hash[temp_array]
+  utilHash = Hash[temp_array]
   # the hash will have two values inside of it that are supposed to be boolean, but are currently strings.
   # these will need to be changed  before proceeding.
-  util_hash["technical"] = to_boolean(util_hash["technical"])
-  util_hash["cultural"] = to_boolean(util_hash["cultural"])
-  return util_hash
+  utilHash["technical"] = to_boolean(utilHash["technical"])
+  utilHash["cultural"] = to_boolean(utilHash["cultural"])
+  return utilHash
 end
 
 # searches through the given file array for the FIRST instance of the specified
@@ -97,15 +97,17 @@ end
 # given a file to look through and a util hash, finds the
 # value of match_code in the document, and returns the line INDEX of the match.
 # (this is the line's index in the file array, not the actual line number)
-def find_code_insert_point (fileArray, util_hash)
-  find_match_index(fileArray, util_hash["match_code"])
+def find_code_insert_point (fileArray, utilHash)
+  find_match_index(fileArray, utilHash["match_code"])
 end
 
 # locates the name of the link for THIS blogpost.
 # I.e. the link text to get to the file that is being searched
-# <!--link_name:name-->
-def find_link_name (fileArray, util_hash)
-  find_match_index(fileArray, util_hash["link_match"])
+# <!--link_name::name::-->
+# takes the fileArray and utilHash and returns a string with the link name
+def find_link_name (fileArray, utilHash)
+  nameIndex = find_match_index(fileArray, utilHash["link_match"])
+  return linkName = fileArray[nameIndex].split("::")[1] # the name should be the second element in the split array
 end
 
 #===========================
@@ -114,10 +116,12 @@ end
 # list of util hash keys:
 # template_path, blog_path, technical, cultural, match_code, link_match, link_code
 utilFileArray = load_file("util_prefs.txt")
-util_hash = parse_util_pref(utilFileArray)
-#p util_hash["match_code"] == "<table class=\"navigation\">"
+utilHash = parse_util_pref(utilFileArray)
+p utilHash["link_match"]
 #- - - - - - - -
-blogTemplateArray = load_file(util_hash["template_path"])
+blogTemplateArray = load_file(utilHash["template_path"])
 
-p find_code_insert_point(blogTemplateArray, util_hash)
-p find_link_name(blogTemplateArray, util_hash)
+p find_code_insert_point(blogTemplateArray, utilHash)
+p find_link_name(blogTemplateArray, utilHash)
+
+p Dir[utilHash["blog_path"] + "*.html"]

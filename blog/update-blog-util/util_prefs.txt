@@ -21,6 +21,7 @@ match_code;<table class="navigation">
 #=======================
 # The following code is used to find the link_name in each blog post that the
 # util program turns up. This is inserted where the link_name is in the link code.
+# format for link name is <!--link_name::name::--> to allow program to get name by splitting.
 #=======================
 link_match;<!--link_name:
 #=======================
