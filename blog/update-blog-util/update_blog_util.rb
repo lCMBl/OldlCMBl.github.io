@@ -124,8 +124,16 @@ def find_other_post (utilHash)
   return fileList
 end
 
+# after some refactoring of the blog posts, I can guarantee that each link only takes up one line,
+# so it should be possible to overwrite (or delete and insert lines) according
+# to the length of the file list array.
+# takes a file, a link name, and the (Line number?) utilHash to insert a link into the file.
+def insert_link (fileArray, linkName, utilHash)
 
-def insert_link (fileArray, utilHash)
+end
+
+# clears all of the links in the navigation section, in preparation for link insertion.
+def clear_links ()
 
 end
 
