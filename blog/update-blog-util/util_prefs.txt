@@ -1,0 +1,32 @@
+# # is the comment character for the util file.
+# the line MUST begin with a # to be ignored
+# the util file contains:
+# paths to the blog template and the blog folder
+# whether or not the blog post is for technical or cultural, or both.
+# code that the program will use to place the cursor for link insertion.
+# code that the program will insert into the html file
+# splits using ';' first part of line becomes the key of a hash.
+#=======================
+# paths and blog types
+template_path;../blog-template.html
+blog_path;../
+technical;true
+cultural;false
+#=======================
+# the following code is matched in the blog template file, and when a match
+# is found, the index of the last line will be saved so that the link
+# code may be inserted at that point.
+#=======================
+match_code;<table class="navigation">
+#=======================
+# The following code is used to find the link_name in each blog post that the
+# util program turns up. This is inserted where the link_name is in the link code.
+#=======================
+link_match;<!--link_name:
+#=======================
+# the following code is inserted after the matched line, once for
+# every blog post that the util program turns up.
+#=======================
+link_code;<tr><td><a href="#">link_name</a></td></tr>
+#=======================
+# no blank lines permitted!
