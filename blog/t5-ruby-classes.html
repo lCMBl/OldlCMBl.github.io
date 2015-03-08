@@ -51,24 +51,20 @@
 
 
 
-  <h1>Enumerables and Grouping</h1>
-  <h2>How to use the group_by method to make your life easier</h2>
-  <h4>March 1st, 2015</h4>
+  <h1>A little bit of Class</h1>
+  <h2>Using classes in ruby</h2>
+  <h4>March 7th, 2015</h4>
+  <!--link_name::name::-->
 
   <section class="blog">
     <p>
-      So one of the most common tasks of a programmer is to group things together and pass them back out. Whether it's a category of products, or a section of customer information, grouping things is vital to programming.
+      Classes are quite possibly one of the most important subjects in Object oriented programming, because classes are the blueprints that you make the aforementioned objects from! For starters, imagine my piece of code is a bike factory. I wouldn't be happy if my factory made just one bike, and writing out a bunch of statements like "make_bike_frame(), paint_bike(green), gears_on_bike(4)" would be just about the worst way you could do it. Also, this way would only let you have one bike anyway! If I'm going to have a bike factory, I'm going to need classes.
     </p>
     <p>
-        Now that the above boring sentences are out of the way, lets get to the good stuff, aka how to use the group_by method on your arrays to make grouping simple. The group_by command can be used on any array or hash to group the contents into different categories based on a block that follows the command. The code looks like this:
-    </p>
-    <p class="code-block">
-      array.group_by {|element| element % 2 == 0} # sorts the elements into a group that is divisible by two and a group that is not.
-      <br>
-      hash.group_by {|key, value| value} # sorts the pairs into groups containing the same value.
+        As I stated before, a class is sort of like a blueprint. After I've defined a class, I can use it to make as many copies of the object as I want, in a much easier fashion than using a collection of methods like I did above. my_bike = Bicycle.new('green', 4) could be used to give us a new, 4 speed, green bike, instead of having to write each part individually. Probably the most important aspect of this though is that I could make a different bike no problem, just by saying her_bike = Bicycle.new('red', 8). Now I have two SEPERATE bike objects, and they each have their own properties.
     </p>
     <p>
-        group_by returns a hash with each key being a category, and each value an array of all of the elements that fall into that category. This flexibility is afforded by both arrays and hashes being enumerable objects. group_by is not itself a method for either the array or the hash class, it is instead a method of the enumerable class. I hope this has provided a little trick that will help you in the future! Till next time!
+        Basically, you should use a class anytime you feel like you are going to need multiple instances of similar objects in order to get things done. For example, if you were to program a game of solitaire, you should ABSOLUTELY make a "Card" class, instead of programming each card individually.
     </p>
 
   </section>
