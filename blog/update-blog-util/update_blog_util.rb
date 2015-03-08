@@ -110,6 +110,25 @@ def find_link_name (fileArray, utilHash)
   return linkName = fileArray[nameIndex].split("::")[1] # the name should be the second element in the split array
 end
 
+# finds all of the files in the blog directory that match the search criteria
+# i.e. if technical = true then only technical blog posts will be returned
+# also, blog template should be excluded from the list.
+def find_other_post (utilHash)
+  fileList = []
+  if (utilHash["technical"])
+    fileList += Dir[utilHash["blog_path"] + "t*.html"]
+  end
+  if (utilHash["cultural"])
+    fileList += Dir[utilHash["blog_path"] + "c*.html"]
+  end
+  return fileList
+end
+
+
+def insert_link (fileArray, utilHash)
+
+end
+
 #===========================
 #Driver test code
 #===========================
@@ -124,4 +143,13 @@ blogTemplateArray = load_file(utilHash["template_path"])
 p find_code_insert_point(blogTemplateArray, utilHash)
 p find_link_name(blogTemplateArray, utilHash)
 
-p Dir[utilHash["blog_path"] + "*.html"]
+# p Dir[utilHash["blog_path"] + "t*.html"]
+p find_other_post(utilHash)
+
+=begin
+Okay, rethinking what the program should do.
+There should be one program that updates the links, and another that takes a .txt file and turns it into a blog post,
+where:
+new line-text-new line = <p>text</p>
+attribute::value = things like title, date, link, etc.
+=end
