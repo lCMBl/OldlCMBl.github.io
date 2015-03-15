@@ -44,8 +44,9 @@ h4 {
   border-width: 1px;
   background: #FFFFFF;
   width: auto;
-  right: -15.4%;
-  float: left;
+  margin: 0 auto;
+  /*right: -15.4%;*/
+  /*float: left;*/
 
 }
 
@@ -57,6 +58,17 @@ h4 {
   border-width: 1px;
 
 }
+
+.navigation-frame {
+  position: relative;
+  background: #FFFFFF;
+  width: auto;
+  right: -15.4%;
+  float: left;
+  border: 0;
+
+}
+
 a {
   color:#2B2B2B
 }
