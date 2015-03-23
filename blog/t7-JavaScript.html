@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog!</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+
+</head>
+
+<main class="text everything">
+
+  <!-- following section is the header bar, and includes title, and links to cultural blog / technical blog -->
+    <!-- just uncomment the preset that is needed.
+    technical blogpost: -->
+    <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">< Christian's Portfolio</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Technical Blog</h1>
+            </td>
+            <td>
+              <a href="c1-chefs-kitchen.html"><div class="top-nav-button large-text">DBC Cultural Blog ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- cultural blog post -->
+    <!-- <section>
+      <table class="top-nav-table">
+        <tbody>
+          <tr>
+            <td>
+              <a href="t1-git-blog.html"><div class="top-nav-button large-text">< DBC Technical Blog</div></a>
+            </td>
+            <td>
+              <h1 style="margin:  15px;">DBC Cultural Blog</h1>
+            </td>
+            <td>
+              <a href="../index.html"><div class="top-nav-button large-text">Christian's Portfolio ></div></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section> -->
+
+
+
+  <h1>Working with Javascript</h1>
+  <h2>And It's differences from Ruby.</h2>
+  <h4>March 22nd, 2015</h4>
+  <!--link_name::name::-->
+
+  <section class="blog">
+    <p>
+      There were two main differences between Javascript and Ruby that really mattered to me, and fortunately they are both rather easy to explain. Javascript requires strict syntax but is permissive about variable operations, while Ruby does not, and Ruby lets you link multiple files together, where Javascript does not.
+    </p>
+    <p>
+      So, I actually like the JavaScript syntax more for most things, but that may be because I'm used to it. I find using brackets instead of the ruby 'end' keywords are very helpful, and much faster to type. Javascript also requires a semicolon at the end of statements, which can be a bit annoying sometimes. I think Ruby really is much better in that area. Another area Ruby is preferred is that is has methods for doing things "in place," which JS lacks. I found myself making many more assignments than I would normally do in Ruby. Finally, Javascript coerces types when you make a non-nonsensical operation, for example, comparing if 0 == false. Now, clearly a number does not equal a boolean, but javascript will attempt to make the statement evaluate anyway, so it assumes that 0 is being used to represent the boolean of false, and therefore returns that 0 does in fact equal false. Doing this silently in the background can lead to headaches, which is why, while it may sound user friendly, I actually prefer Ruby in this respect, because it doesn't coerce data types.
+    </p>
+    <p>
+      This gripe is relevant to the solo challenge for this week, where I really would have benefited from being able to use Ruby's file linking. Basically, there is no 'require' equivalent in javascript. Sure, HTML pages can load multiple javascript files, but I wasn't making an HTML page, instead focusing my efforts into making an ascii game that could be run in the terminal. This meant that all of my functions and other code sections that would normally be put into separate files all had to be crammed into a single document. This made navigating and making changes an extreme chore. everything else about javascript I could work around easily, but I really think ruby wins out in this category. I want to be able to break things down into multiple files for a project as complex as this, even if it's for readability only.
+    </p>
+
+  </section>
+  <table >
+    <iframe class="navigation-frame" src="navigation-links-technical.html"></iframe>
+    <!-- <iframe class="navigation-frame" src="navigation-links-cultural.html"></iframe> -->
+  </table>
+</main>
