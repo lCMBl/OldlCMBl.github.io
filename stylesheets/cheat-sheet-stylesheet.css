@@ -1,0 +1,20 @@
+
+.info-table {
+  margin: 0 auto;
+}
+
+.info-table-cell {
+  /*border-top: solid black 1px;
+  border-left: solid black 1px;*/
+  background: #CCDEDE;
+  display: inline-block;
+  width: 30em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+
+}
+
+.spacer-table {
+  width: 15%;
+}

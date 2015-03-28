@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog!</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet-stylesheet.css">
+  <!-- <link rel="stylesheet" type="text/css" href=""> -->
+
+</head>
+
+<main>
+<h1 style="text-align: center;">Looping in Ruby and Javascript</h1>
+<!--Each section represents a single type of loop, and how it is done in js and ruby-->
+  <section>
+    <table class="info-table">
+      <tr>
+        <td class="info-table-cell">
+          <h3>For loop in Ruby</h3>
+          <p>Used for iterating through a known number of steps.</p>
+          <p><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #66d9ef">in</span> <span style="color: #ae81ff">0</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">10</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;the current loop number is #{</span><span style="color: #f8f8f2">i</span><span style="color: #e6db74">}&quot;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e"># or,</span>
+
+<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">element</span> <span style="color: #66d9ef">in</span> <span style="color: #f8f8f2">array</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;The current element is: #{</span><span style="color: #f8f8f2">element</span><span style="color: #e6db74">}&quot;</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+</p>
+        </td>
+        <td class="spacer-table"></td>
+        <td class="info-table-cell">
+          <h3>For loop in Javascript</h3>
+          <p>Used for iterating through a known number of steps.</p>
+          <p><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">){</span>
+    <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span> <span style="color: #e6db74">&quot;the current loop number is: &quot;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">i</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #75715e">// or,</span>
+
+<span style="color: #66d9ef">for</span> <span style="color: #a6e22e">each</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">element</span> <span style="color: #66d9ef">in</span> <span style="color: #a6e22e">array</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span> <span style="color: #e6db74">&quot;The current element is: &quot;</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">element</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+</p>
+        </td>
+
+      </tr>
+    </table>
+  </section>
+
+
+  <section>
+    <table  class="info-table">
+      <tr>
+
+        <td class="info-table-cell">
+          <h3>While loop in Ruby</h3>
+          <p>Used for conditional looping. The <code>while</code> keyword allows you to run a loop while a given condition is true. The code block must be followed by an <code>end</code> keyword. </p>
+          <p><!-- HTML generated using hilite.me -->
+          <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1</span>
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">10</span>
+    <span style="color: #f8f8f2">puts</span> <span style="color: #f8f8f2">n</span>
+    <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span>
+<span style="color: #66d9ef">end</span>
+</pre></div>
+
+        </p>
+        </td>
+        <td class="spacer-table">
+        <!-- Separator cell -->
+        </td>
+        <td class="info-table-cell">
+
+          <h3>While loop in JavaScript</h3>
+          <p>Used for conditional looping. The keyword <code>while</code> is followed by an expression in parentheses, which determins when the loop will finish. </p>
+          <p>
+          <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">n</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1</span>
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">n</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">n</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #a6e22e">n</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">n</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+
+</pre></div>
+
+          </p></td>
+      </tr>
+    </table>
+  </section>
+
+<section>
+    <table  class="info-table">
+      <tr>
+
+        <td class="info-table-cell">
+          <h3>Operating on each member of an Array in Ruby</h3>
+          <p>Used for performing some function on each element in an array.</p>
+          <p><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">names</span> <span style="color: #f92672">=</span> <span style="color: #f92672">[</span><span style="color: #e6db74">&quot;peter&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;paul&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;mary&quot;</span><span style="color: #f92672">]</span>
+
+<span style="color: #f8f8f2">names</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">each</span> <span style="color: #f8f8f2">{</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">name</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">puts</span> <span style="color: #e6db74">&quot;#{</span><span style="color: #f8f8f2">name</span><span style="color: #e6db74">} is in the band!&quot;</span><span style="color: #f8f8f2">}</span>
+</pre></div>
+</p>
+        </td>
+        <td class="spacer-table">
+        <!-- Separator cell -->
+        </td>
+        <td class="info-table-cell">
+             <h3>Operating on each member of an Array in Javascript</h3>
+          <p>Used for performing some function on each element in an array.</p>
+          <p><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">var</span> <span style="color: #a6e22e">names</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;peter&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;paul&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;mary&quot;</span><span style="color: #f8f8f2">];</span>
+
+<span style="color: #66d9ef">function</span> <span style="color: #a6e22e">printNames</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">element</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">index</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">array</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #a6e22e">console</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">log</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">element</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; is in the band!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #a6e22e">names</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">forEach</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">printNames</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+</p>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- <section>
+    <table class="info-table">
+      <tr>
+
+        <td class="info-table-cell">
+          <h3></h3>
+          <p>Used for </p>
+          <p>(insert hilite.me example)</p>
+        </td>
+        <td class="spacer-table">
+
+        </td>
+        <td class="info-table-cell">
+          <h3></h3>
+          <p>Used for  </p>
+          <p>(insert hilite.me example)</p>
+        </td>
+
+      </tr>
+    </table>
+  </section> -->
+
+
+</main>
