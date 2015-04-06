@@ -6,6 +6,7 @@ html {
 a {
   text-decoration: none;
   color:#2B2B2B;
+  font-weight: bold;
 }
 
 a:link {
