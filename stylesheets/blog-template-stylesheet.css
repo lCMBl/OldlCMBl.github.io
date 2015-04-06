@@ -70,9 +70,23 @@ h4 {
 }
 
 a {
-  color:#2B2B2B
+  text-decoration: none;
+  color:#2B2B2B;
+}
+
+a:link {
+  color: black;
 }
 
 a:hover {
+  background: white;
   color: #8F8F8F;
+}
+
+a:active {
+  color: lightgoldenrodyellow;
+}
+
+a:visited {
+  color: black;
 }
